@@ -16,7 +16,9 @@ const Dashboard: React.FC<DashboardProps> = ({ role, onLogout }) => {
 
   useEffect(() => {
     if (role === UserRole.STUDENT) {
-      getAcademicInsights(MOCK_STUDENT.name, MOCK_STUDENT.performance).then(setAiInsight);
+      getAcademicInsights(MOCK_STUDENT.name, MOCK_STUDENT.performance).then((insight) => {
+        setAiInsight(insight || "Keep up the hard work! Your consistent effort is showing in your progress.");
+      });
     } else if (role === UserRole.TEACHER) {
       setAiInsight("You have 3 classes scheduled for today. Remember to mark attendance for Grade 10-A.");
     } else {
