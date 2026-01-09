@@ -18,13 +18,16 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           </div>
           <span className="text-2xl font-bold text-slate-900 tracking-tight">EduStream</span>
         </div>
-        <div className="hidden md:flex gap-8 items-center font-medium text-slate-600">
+        <div className="hidden md:flex gap-6 items-center font-medium text-slate-600">
           <button onClick={() => onNavigate('home')} className="hover:text-blue-600 transition-colors">Home</button>
           <button onClick={() => onNavigate('about')} className="hover:text-blue-600 transition-colors">About</button>
+          <button onClick={() => onNavigate('teachers')} className="hover:text-blue-600 transition-colors">Teachers</button>
+          <button onClick={() => onNavigate('students')} className="hover:text-blue-600 transition-colors">Students</button>
+          <button onClick={() => onNavigate('administration')} className="hover:text-blue-600 transition-colors">Administration</button>
           <button onClick={() => onNavigate('contact')} className="hover:text-blue-600 transition-colors">Contact</button>
           <button 
             onClick={() => onNavigate('login')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all shadow-md hover:shadow-lg"
+            className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-all shadow-md hover:shadow-lg"
           >
             Login
           </button>
@@ -40,18 +43,24 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           <p className="text-lg text-slate-600 max-w-lg leading-relaxed">
             Revolutionize your academic environment with our all-in-one digital platform. Streamline communication, track performance, and empower students, teachers, and admins.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-wrap gap-3 mt-4">
             <button 
               onClick={() => onNavigate('login')}
-              className="px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:shadow-blue-200/50"
+              className="px-6 py-3 bg-blue-600 text-white rounded-2xl font-semibold hover:bg-blue-700 transition-all shadow-md"
             >
-              Get Started Now
+              Login
             </button>
             <button 
-              onClick={() => onNavigate('about')}
-              className="px-8 py-4 bg-white text-blue-600 border border-blue-100 rounded-2xl font-bold text-lg hover:bg-slate-50 transition-all"
+              onClick={() => onNavigate('login')}
+              className="px-6 py-3 bg-white text-blue-600 border border-blue-100 rounded-2xl font-semibold hover:bg-slate-50 transition-all"
             >
-              Learn More
+              Register
+            </button>
+            <button 
+              onClick={() => onNavigate('dashboard')}
+              className="px-6 py-3 bg-slate-800 text-white rounded-2xl font-semibold hover:bg-slate-900 transition-all"
+            >
+              View Dashboard
             </button>
           </div>
           <div className="flex items-center gap-6 pt-4 text-slate-400">

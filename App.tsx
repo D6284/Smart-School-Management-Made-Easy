@@ -5,6 +5,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Teachers from './pages/Teachers';
+import Students from './pages/Students';
+import Administration from './pages/Administration';
 import { UserRole } from './types';
 
 const App: React.FC = () => {
@@ -30,6 +33,12 @@ const App: React.FC = () => {
     switch (currentPage) {
       case 'home':
         return <Home onNavigate={navigate} />;
+      case 'teachers':
+        return <Teachers onNavigate={navigate} />;
+      case 'students':
+        return <Students onNavigate={navigate} />;
+      case 'administration':
+        return <Administration onNavigate={navigate} />;
       case 'about':
         return <About onNavigate={navigate} />;
       case 'contact':
